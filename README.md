@@ -5,6 +5,11 @@
 * pip install zeep
 
 # Functioning test_scripts 
-## authentication
+## auth.py
 login(username, password)
 logout(sessionId)
+invalidateSessions(sessionIds)
+
+
+# Credits
+Thanks to the folks working on simple-salesforce. I poured over your authentication code to figure this SOAP stuff out. 
