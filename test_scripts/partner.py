@@ -14,7 +14,6 @@ class PartnerApi(object):
         partner_client = zeep.Client(wsdl=wsdl)
         
         self.username = username
-        self.password = password
         self.token = token
         self.domain = domain
         self.api = api
@@ -34,6 +33,15 @@ class PartnerApi(object):
                 'defaultNamespace': namespace
             }
         }
+
+        # loging without security token
+        self.partner.login(username=username, password=password, _soapheaders=self.header)
+
+        # log in with security token
+
+        # create this object with just the session id
+
+        
 
     def logout(self):
         self.partner.logout(_soapheaders=self.header)
